@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ServerModel">
+	<class name="UserInfo" table="userinfo">
+		<id name="userId" column="UserID">
+			<generator class="assigned" />
+		</id>		
+		<property name="deviceIp">
+			<column name="DeviceIP" length="15" not-null="true" />
+		</property>
+		
+		<property name="cloudIp">
+			<column name="CloudIp" length="15" not-null="true" />
+		</property>
+		
+		<property name="deviceGPSLati">
+			<column name="DeviceGPSLati" not-null="true" />
+		</property>
+		
+		<property name="deviceGPSLongi">
+			<column name="DeviceGPSLongi" not-null="true"/>
+		</property>
+		
+		<property name="password">
+			<column name="Password" length="20" not-null="true"/>
+		</property>
+		
+	</class>
+</hibernate-mapping>

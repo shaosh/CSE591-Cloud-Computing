@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FileSysClient</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_str">Hello Qingyun Li, welcome to our File System Client.</string>
+    <string name="upload_str">upload</string>
+    <string name="share_str">Share page</string>
+    <string name="download_str">Download page</string>
+    <string name="title_activity_upload">UploadActivity</string>
+    <string name="choose_file_str">Choose File:</string>
+    <string name="title_activity_download">DownloadActivity</string>
+    <string name="title_activity_list_view_checkboxes">ListViewCheckboxesActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_file">FileActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

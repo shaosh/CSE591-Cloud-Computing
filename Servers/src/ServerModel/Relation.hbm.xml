@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ServerModel">
+	<class name="Relation" table="relation">
+		<id name="relationId" column="RelationID">
+			<generator class="native" />
+		</id>		
+	
+		<property name="fileId">
+			<column name="FileId" not-null="true"/>
+		</property>
+		
+		<property name="target">
+			<column name="Target" not-null="true"/>
+		</property>	
+		
+		<property name="source">
+			<column name="Source" not-null="true"/>
+		</property>	    
+		
+		<property name="isOwner">
+			<column name="IsOwner" not-null="true"/>
+		</property>		
+	</class>
+</hibernate-mapping>
