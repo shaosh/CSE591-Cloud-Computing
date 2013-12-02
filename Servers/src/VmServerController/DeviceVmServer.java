@@ -18,7 +18,7 @@ import ServerModel.UploadedFileManager;
 import ServerModel.UserInfo;
 import ServerModel.UserInfoManager;
 
-public class VmServer {
+public class DeviceVmServer {
 //	public static final int CLIENT_SERVER_PORT = 12346;//Listening device port number  
 //	public static final int LISTEN_VM_PORT = 12347;//Listening VM port number  
 	public static final int VM_VM_PORT = 12346;
@@ -28,8 +28,8 @@ public class VmServer {
 	public static Socket client2;
 	
     public static void main(String[] args) {  
-        System.out.println("Starting vm-vm server...\n");  
-        VmServer server = new VmServer();  
+        System.out.println("Starting device-vm server...\n");  
+        DeviceVmServer server = new DeviceVmServer();  
         server.init();  
     }  
   
@@ -37,8 +37,8 @@ public class VmServer {
         try {  
 //            ServerSocket serverSocket1 = new ServerSocket(CLIENT_SERVER_PORT);  
 //            ServerSocket serverSocket2 = new ServerSocket(12348);
-			ServerSocket serverSocket1 = new ServerSocket(VM_VM_PORT);  
-//			ServerSocket serverSocket2 = new ServerSocket(DEVICE_VM_PORT);
+//			ServerSocket serverSocket1 = new ServerSocket(VM_VM_PORT);  
+			ServerSocket serverSocket2 = new ServerSocket(DEVICE_VM_PORT);
         	
             while (true) {  
                 //Client and server are connected.
@@ -48,8 +48,8 @@ public class VmServer {
 //            		new HandlerThreadDevice(client);
 //            	}
 //            	else if((client = serverSocket1.accept()) != null){
-            	client = serverSocket1.accept();
-           		new HandlerThreadVM(client);
+            	client = serverSocket2.accept();
+           		new HandlerThreadDevice(client);
 //            	}
 //            	client1 = serverSocket1.accept();
 //            	System.out.println("Here4");
